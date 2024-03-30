@@ -4,7 +4,9 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useBetterForm } from '../../hooks';
 
+// In the AppFormInput `age` is string (because html inputs can only operate on strings)
 export type AppFormInput = z.input<ReturnType<typeof useAppFormValidation>>;
+// In the AppFormOutput `age` is number (because we coerce string to number in our validation schema)
 export type AppFormOutput = z.output<ReturnType<typeof useAppFormValidation>>;
 
 const appFormDefaultValues: AppFormInput = {
