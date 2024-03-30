@@ -1,4 +1,15 @@
 {
+  "appModule": {
+    "alertMsg": "{{firstName}} {{lastName}}, {{email}}. typeof age === \"{{typeofAge}}\"",
+    "tooYoung": "Hey, you are too young!",
+    "tooOld": "Nope, too old for this shit!",
+    "labels": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "age": "Age",
+      "email": "Email"
+    }
+  },
   "forms": {
     "required": "This field must not be empty",
     "max_one": "This field must be less than {{count}} character long",
