@@ -1,0 +1,20 @@
+{
+  "forms": {
+    "required": "This field must not be empty",
+    "max_one": "This field must be less than {{count}} character long",
+    "max_other": "This field must be less than {{count}} characters long",
+    "min_one": "This field must be at least {{count}} character long",
+    "min_other": "This field must be at least {{count}} characters long",
+    "maxNumber": "This field must be less than {{count}}",
+    "minNumber": "This field must be greater than {{count}}",
+    "minArray_one": "This field must have at least {{count}} item",
+    "minArray_other": "This field must have at least {{count}} items",
+    "maxArray_one": "This field must have less than or equal to {{count}} item",
+    "maxArray_other": "This field must have less than or equal to {{count}} items",
+    "invalid": "This field is invalid",
+    "invalidType": {
+      "number": "This field must contain only numbers",
+      "integer": "This field must be an integer"
+    }
+  }
+}
