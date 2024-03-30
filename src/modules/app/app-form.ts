@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useBetterForm } from '../../hooks';
 
 export type AppFormInput = z.input<ReturnType<typeof useAppFormValidation>>;
 export type AppFormOutput = z.output<ReturnType<typeof useAppFormValidation>>;
@@ -35,7 +35,7 @@ const useAppFormValidation = () => {
 };
 
 export const useAppForm = () => {
-  return useForm({
+  return useBetterForm({
     defaultValues: appFormDefaultValues,
     resolver: zodResolver(useAppFormValidation()),
   });
