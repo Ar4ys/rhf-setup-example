@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useBetterForm } from '../../hooks';
+import { useForm } from 'react-hook-form';
 
 // In the AppFormInput `age` is string (because html inputs can only operate on strings)
 export type AppFormInput = z.input<ReturnType<typeof useAppFormValidation>>;
@@ -37,7 +37,7 @@ const useAppFormValidation = () => {
 };
 
 export const useAppForm = () => {
-  return useBetterForm({
+  return useForm({
     defaultValues: appFormDefaultValues,
     resolver: zodResolver(useAppFormValidation()),
   });

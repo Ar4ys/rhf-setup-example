@@ -20,7 +20,7 @@ export const FormField = <
   control,
   ...props
 }: FormFieldProps<TFieldValues, TPath>): ReactElement | null => {
-  const { field, fieldState } = useController({
+  const { field, fieldState, formState } = useController({
     name,
     control,
     defaultValue,
@@ -30,7 +30,10 @@ export const FormField = <
     <Field
       {...props}
       {...field}
-      error={fieldState.isTouched && (fieldState.error?.message ?? fieldState.error?.type)}
+      error={
+        (fieldState.isTouched || formState.isSubmitted) &&
+        (fieldState.error?.message ?? fieldState.error?.type)
+      }
     />
   );
 };
