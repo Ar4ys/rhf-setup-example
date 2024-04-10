@@ -6,6 +6,4 @@ export type FormErrorProps = {
   text?: FormErrorType;
 };
 
-export const FormError: FC<FormErrorProps> = ({ text: text }) => (
-  <p style={{ color: 'red' }}>{text}</p>
-);
+export const FormError: FC<FormErrorProps> = ({ text }) => <p style={{ color: 'red' }}>{text}</p>;
