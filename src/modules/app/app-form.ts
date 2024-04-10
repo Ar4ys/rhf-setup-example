@@ -38,6 +38,7 @@ const useAppFormValidation = () => {
 
 export const useAppForm = () => {
   return useForm<AppFormInput, undefined, AppFormOutput>({
+    mode: 'all',
     defaultValues: appFormDefaultValues,
     resolver: zodResolver(useAppFormValidation()),
   });
