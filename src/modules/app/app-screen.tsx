@@ -13,8 +13,9 @@ export const App: FC = () => {
     name: 'age',
   });
 
-  const onSubmit = handleSubmit(({ firstName, lastName, email, age }) => {
-    alert(t('appModule.alertMsg', { firstName, lastName, email, typeofAge: typeof age }));
+  const onSubmit = handleSubmit(values => {
+    // `values` has type `AppFormOutput`.
+    alert(t('appModule.alertMsg', { ...values, typeofAge: typeof values.age }));
   });
 
   return (
