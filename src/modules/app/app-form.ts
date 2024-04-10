@@ -37,7 +37,7 @@ const useAppFormValidation = () => {
 };
 
 export const useAppForm = () => {
-  return useForm({
+  return useForm<AppFormInput, undefined, AppFormOutput>({
     defaultValues: appFormDefaultValues,
     resolver: zodResolver(useAppFormValidation()),
   });
